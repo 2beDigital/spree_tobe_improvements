@@ -1,2 +1,0 @@
-<% headers = [Spree.t('name'), Spree.t('email')] %>
-<%= CSV.generate_line headers %><% @collection.each do |user| %><%= CSV.generate_line([user.login, user.email]) %><% end %>
