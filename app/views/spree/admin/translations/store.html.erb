@@ -1,0 +1,10 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+<%= render :partial => 'spree/shared/error_messages', locals: { target: @store } %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t(:back_to_general_settings), edit_admin_general_settings_url, icon: 'arrow-left' %>
+  </li>
+<% end %>
+
+<%= render 'form' %>
