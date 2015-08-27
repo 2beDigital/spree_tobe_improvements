@@ -9,7 +9,7 @@ Spree::Core::Search::Base.class_eval do
     else
       base_scope = new_base_scope
     end
-    return base_scope if current_user and current_user.has_spree_role? :admin
+    return base_scope if (current_user and current_user.has_spree_role? :admin || Spree::Role.find_by_name('retail').nil?)
     if current_user and current_user.has_spree_role? :retail
       base_scope = base_scope.where("#{Spree::Product.quoted_table_name}.retail_only = ?", true).references("#{Spree::Product.quoted_table_name}")
     else
