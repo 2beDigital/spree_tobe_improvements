@@ -1,23 +1,31 @@
-SpreeTobeImprovements
+SpreeToBeImprovements
 =====================
 
-Introduction goes here.
+Improvements for Spree implemented by 2BeDigital.
 
 Installation
 ------------
 
-Add spree_tobe_improvements to your Gemfile:
+In your `Gemfile`, add the following dependencies:
 
-```ruby
-gem 'spree_tobe_improvements'
-```
+	gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => '2-4-stable'
+	gem 'spree_static_content', :git => 'https://github.com/spree-contrib/spree_static_content', :branch => '2-4-stable'
+	gem 'spree_editor', :git => 'https://github.com/spree-contrib/spree_editor', :branch => '2-4-stable'
+	gem 'spree_tobe_improvements', :git => 'https://github.com/2beDigital/spree_tobe_improvements.git', :branch => 'master'
 
-Bundle your dependencies and run the installation generator:
 
-```shell
-bundle
-bundle exec rails g spree_tobe_improvements:install
-```
+From `Rails.root` run:
+
+    $ bundle install
+    $ bundle exec rails g spree_i18n:install
+    $ bundle exec rails g spree_static_content:install
+    $ bundle exec rails g spree_editor:install
+    $ bundle exec rails g spree_tobe_improvements:install
+
+For more information about the externals dependencies, please see:
+* https://github.com/spree-contrib/spree_i18n
+* https://github.com/spree-contrib/spree_static_content
+* https://github.com/spree-contrib/spree_editor
 
 Testing
 -------

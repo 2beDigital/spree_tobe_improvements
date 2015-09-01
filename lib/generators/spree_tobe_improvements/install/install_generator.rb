@@ -1,7 +1,7 @@
 module SpreeTobeImprovements
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      source_root File.expand_path('../../../../../templates', __FILE__)
+      source_root File.expand_path('../../templates', __FILE__)
 
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
@@ -15,8 +15,11 @@ module SpreeTobeImprovements
         inject_into_file 'vendor/assets/stylesheets/spree/backend/all.css', " *= require spree/backend/spree_tobe_improvements\n", :before => /\*\//, :verbose => true
       end
 
-      def copy_ckeditor_file
+      def copy_ckeditor_files
         copy_file "config/initializers/ckeditor.rb", "config/initializers/ckeditor.rb"
+        copy_file "app/models/ckeditor/asset.rb", "app/models/ckeditor/asset.rb"
+        copy_file "app/models/ckeditor/attachment_file.rb", "app/models/ckeditor/attachment_file.rb"
+        copy_file "app/models/ckeditor/picture.rb", "app/models/ckeditor/picture.rb"
       end
 
       def add_migrations
