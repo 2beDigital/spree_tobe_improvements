@@ -1,3 +1,6 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+<%= render :partial => 'spree/shared/error_messages', locals: { target: @page } %>
+
 <% content_for :page_title do %>
   <%= Spree.t(:page_edit) %>
 <% end %>
