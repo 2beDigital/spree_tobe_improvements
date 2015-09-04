@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_tobe_improvements'
-  s.version     = '2.4.7'
+  s.version     = '2.4.10'
   s.summary     = '2BeDigital Improvements'
   s.description = '2BeDigital Improvements'
   s.required_ruby_version = '>= 1.9.3'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '>= 2.4.7'
+  s.add_dependency 'spree_core', '>= 2.4.10'
   s.add_dependency 'spree_i18n', '>= 2.4.7'
   s.add_dependency 'spree_static_content', '>= 2.3.0'
   s.add_dependency 'spree_editor', '>= 2.2.1'
