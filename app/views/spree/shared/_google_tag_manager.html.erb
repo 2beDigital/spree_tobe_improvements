@@ -1,12 +1,12 @@
 <!-- Google Tag Manager -->
 <% @gtm = get_google_tag_manager_id %>
 <noscript>
-  <iframe src="//www.googletagmanager.com/ns.html?id=<%= @gtm.gtm_id %>"
+  <iframe src="//www.googletagmanager.com/ns.html?id=<%= @gtm.present? ? @gtm.gtm_id : '' %>"
           height="0" width="0" style="display:none;visibility:hidden">
   </iframe>
 </noscript>
 <script>
-    google_tag_manager = '<%= @gtm.gtm_id %>'
+    google_tag_manager = '<%= @gtm.present? ? @gtm.gtm_id : '' %>'
     if ( google_tag_manager.length > 0 ){
         dataLayer = [];
         (function (w, d, s, l, i) {
@@ -20,14 +20,13 @@
             j.src =
                     '//www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', '<%= @gtm.gtm_id %>');
+        })(window, document, 'script', 'dataLayer', '<%= @gtm.present? ? @gtm.gtm_id : '' %>');
     }
 </script>
 <!-- End Google Tag Manager -->
 
 <%= javascript_tag do %>
-    <% google_tag_manager = @gtm.gtm_id%>
-    <% if google_tag_manager.present? %>
+    <% if @gtm.present? %>
         <% if @order.present? and @order.email.present? %>
             dataLayer.push({'transactionEmail': '<%= @order.email %>'});
         <% end %>
