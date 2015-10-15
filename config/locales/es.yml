@@ -5,3 +5,5 @@ es:
   export_users_to_csv: "Exportar a CSV"
   back_to_general_settings: "Volver a configuración"
   gtm: 'Administrador etiquetas google'
+  checkout_allowed_errors:
+      minimum_order_value: 'Compra minima de '

@@ -8,3 +8,5 @@ en:
     back_to_pages_list: Back To Pages List
     page_edit: Edit Page
   gtm: 'Google Tag Manager'
+  checkout_allowed_errors:
+      minimum_order_value: 'Minimum Purchase of '
