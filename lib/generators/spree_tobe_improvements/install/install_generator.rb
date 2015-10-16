@@ -22,6 +22,10 @@ module SpreeTobeImprovements
         copy_file "app/models/ckeditor/picture.rb", "app/models/ckeditor/picture.rb"
       end
 
+      def copy_app_configuration
+        copy_file "app/models/spree/app_configuration_decorator.rb", "app/models/spree/app_configuration_decorator.rb"
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_tobe_improvements'
       end
