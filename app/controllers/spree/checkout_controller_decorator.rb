@@ -15,7 +15,6 @@ Spree::CheckoutController.class_eval do
           shipment.update_column(:cost, 0)
         end
       end
-      @total =  Spree::Money.new(@order.shipments.to_a.sum(&:cost), currency: @order.currency)
       @order.update!
     end
   end
