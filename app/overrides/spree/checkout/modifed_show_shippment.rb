@@ -1,21 +1,33 @@
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
-                     :name => 'remove_h5',
+                     :name => 'remove_h4',
                      :sequence => 1,
-                     :remove => 'h5.stock-shipping-method-title')
+                     :remove => 'h4.stock-shipping-method-title')
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
-                     :name => 'remove_shipping_rates',
+                     :name => 'remove_h5',
                      :sequence => 2,
+                     :remove => 'h5.stock-shipping-method-title')
+Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
+                     :name => 'remove_shipping_rates',
+                     :sequence => 3,
                      :remove => 'erb[silent]:contains("ship_form.object.shipping_rates.each do |rate|")',
                      :closing_selector => 'erb[silent]:contains("end")')
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
                      :name => 'remove_ul',
-                     :sequence => 3,
+                     :sequence => 4,
                      :remove => 'ul.field.radios.shipping-methods')
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
                      :name => 'insert_new_method_shipping',
-                     :sequence => 4,
+                     :sequence => 5,
                      :insert_bottom => 'div.shipment',
                      :partial => 'spree/checkout/modified_shipping_method' )
+
+Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
+                     :name => 'insert_new_info',
+                     :sequence => 6,
+                     :insert_after => 'h4.stock-location',
+                     :text => '<% if (ship_form.object.backordered? && backorder_charge) %>
+                                  <h5 class="alert alert-info"><%= t(:free_delivery) %></h5>
+                               <% end %>' )

@@ -11,3 +11,4 @@ en:
   checkout_allowed_errors:
       minimum_order_value: 'Minimum Purchase of '
   info_free_shipping_for_backorder: This shipping is free, we haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
+  free_delivery: Free delivery for this items.
