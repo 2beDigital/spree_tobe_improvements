@@ -10,7 +10,7 @@ select option{
     max-width: 360px !important;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 460px) {
     select option{
         max-width: 260px !important;
     }
