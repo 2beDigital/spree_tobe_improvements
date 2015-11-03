@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  export_users_to_csv: "Export to CSV"
+  export_to_csv: "Export to CSV"
   back_to_general_settings: "Back to general settings"
   spree:
     back_to_pages_list: Back To Pages List
