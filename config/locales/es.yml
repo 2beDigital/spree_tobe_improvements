@@ -1,4 +1,4 @@
-﻿# Sample localization file for English. Add more files in this directory for other locales.
+﻿# Sample localization file for Spanish. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
@@ -6,6 +6,11 @@ es:
   back_to_general_settings: "Volver a configuración"
   gtm: 'Administrador etiquetas google'
   checkout_allowed_errors:
-      minimum_order_value: 'Compra mínima de '
+  	minimum_order_value: 'Compra mínima de '
+  spree:
+  	back_to_pages_list: Volver a la lista de páginas
+    page_edit: Editar página
+    backorder_charge: Cargo del pedido pendiente
+    minimum_order_value: 'Compra mínima de '
   free_delivery: Envío gratuito para los siguientes productos.
   info_free_shipping_for_backorder: 'No tenemos suficiente producto en el almacén, se le enviará cuando haya disponibilidad. Gracias y disculpen las molestias.'
