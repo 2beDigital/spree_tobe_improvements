@@ -6,9 +6,9 @@ es:
   back_to_general_settings: "Volver a configuración"
   gtm: 'Administrador etiquetas google'
   checkout_allowed_errors:
-  	minimum_order_value: 'Compra mínima de '
+    minimum_order_value: 'Compra mínima de '
   spree:
-  	back_to_pages_list: Volver a la lista de páginas
+    back_to_pages_list: Volver a la lista de páginas
     page_edit: Editar página
     backorder_charge: Cargo del pedido pendiente
     minimum_order_value: 'Compra mínima de '

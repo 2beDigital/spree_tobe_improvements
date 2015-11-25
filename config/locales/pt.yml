@@ -6,9 +6,9 @@ pt:
   back_to_general_settings: "Voltar para configuração"
   gtm: 'Etiquetas Gestor google'
   checkout_allowed_errors:
-  	minimum_order_value: 'Compra mínima de '
+    minimum_order_value: 'Compra mínima de '
   spree:
-  	back_to_pages_list: Voltar para a lista de páginas
+    back_to_pages_list: Voltar para a lista de páginas
     page_edit: Editar página
     backorder_charge: Carga de atrasos
     minimum_order_value: 'Compra mínima de '
