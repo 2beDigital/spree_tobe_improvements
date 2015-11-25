@@ -1,0 +1,18 @@
+<div class="cookies-bar">
+  <%= t(:cookies_services_info) %>
+  <div class="btn-toolbar">
+    <a href="#" onclick='display_off();' class="btn">OK</a>
+    <% page = Spree::Page.visible.where('slug like ?', "%cookies%")
+       if !page.nil? && page.count == 1
+    %>
+        <%= link_to t(:learn_more), page.first.slug, target: '_self', :class => 'btn btn-link' %>
+    <% end %>
+  </div>
+</div>
+<% content_for :script do %>
+	<script>
+		function display_off(){
+			$('.cookies-bar').css({'display' : 'none'})
+		}
+	</script>
+<% end %>

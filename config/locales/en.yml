@@ -14,3 +14,5 @@ en:
     minimum_order_value: 'Minimum Purchase of '  
   free_delivery: Free delivery for this items.
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
+  learn_more: "[+] Info"
+  cookies_services_info: "Cookies help us deliver our services. By using our services, you agree to our use of cookies."

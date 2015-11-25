@@ -5,3 +5,8 @@ end
 def backorder_charge
   return Spree::Config[:backorder_charge]
 end
+
+def cookies_accepted?
+  return false unless request.cookies['accept.cookies'].present?
+  true
+end
