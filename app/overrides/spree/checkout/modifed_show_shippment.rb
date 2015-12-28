@@ -28,6 +28,6 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
                      :name => 'insert_new_info',
                      :sequence => 6,
                      :insert_after => 'h4.stock-location',
-                     :text => '<% if (ship_form.object.backordered? && backorder_charge) || ship_form.object.cost == 0) %>
+                     :text => '<% if (ship_form.object.backordered? && backorder_charge) || ship_form.object.cost == 0 %>
                                   <h5 class="alert alert-info"><%= t(:free_delivery) %></h5>
                                <% end %>' )
