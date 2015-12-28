@@ -1,5 +1,5 @@
 Spree::CheckoutController.class_eval do
-  after_action :check_backorder_shipment
+  after_action :check_backorder_and_shipment_categories
   def ensure_checkout_allowed
     check = @order.checkout_allowed?
     unless check == true
