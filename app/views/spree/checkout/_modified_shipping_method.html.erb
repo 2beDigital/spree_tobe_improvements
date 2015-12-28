@@ -6,7 +6,7 @@
             <label>
               <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
               <span class="rate-name"><%= rate.name %></span>
-              <span class="rate-cost"><%= rate.display_cost %></span>
+              <span class="rate-cost"><%= (ship_form.object.cost > 0) ? rate.display_cost : ''; %></span>
             </label>
           </li>
       <% end %>

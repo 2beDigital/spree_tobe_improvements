@@ -4,5 +4,6 @@ Spree::Admin::GeneralSettingsController.class_eval do
     edit_original
     @preferences_currency << :minimum_order_value
     @preferences_currency << :backorder_charge
+    @preferences_currency << :check_categories
   end
 end

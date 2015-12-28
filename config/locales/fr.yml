@@ -10,7 +10,8 @@ fr:
   spree:
     back_to_pages_list: Retour à la liste des pages
     page_edit: Modifier la page
-    backorder_charge: Cargo rupture de stock
+    backorder_charge: Sans frais de rupture de stock
+    check_categories: Seuls les frais de livraison premier
     minimum_order_value: 'Achat minimum de '
   free_delivery: Livraison gratuite pour ces produits.
   info_free_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
