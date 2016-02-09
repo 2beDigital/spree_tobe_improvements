@@ -13,6 +13,7 @@ pt:
     backorder_charge: Sem carga de atrasos
     check_categories: Somente encargos primeira entrega
     minimum_order_value: 'Compra mínima de '
+    updated_at: Modificada
   free_delivery: Frete grátis para esses produtos.
   info_free_shipping_for_backorder: 'Não temos produto suficiente em estoque e será enviado quando houver disponibilidade. Obrigado e desculpe.'
   learn_more: "Mais informação"

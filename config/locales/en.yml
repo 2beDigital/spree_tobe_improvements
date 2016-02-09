@@ -12,7 +12,8 @@ en:
     page_edit: Edit Page
     backorder_charge: Without backorder charge
     check_categories: Only first delivery charges
-    minimum_order_value: 'Minimum Purchase of '  
+    minimum_order_value: 'Minimum Purchase of '
+    updated_at: Modified
   free_delivery: Free delivery for this items.
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
   learn_more: "[+] Info"
