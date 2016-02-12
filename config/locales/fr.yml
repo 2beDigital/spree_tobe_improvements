@@ -14,6 +14,7 @@ fr:
     check_categories: Seuls les frais de livraison premier
     minimum_order_value: 'Achat minimum de '
     updated_at: Modifié
+    created_at: Créé
   free_delivery: Livraison gratuite pour ces produits.
   info_free_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
   learn_more: "En savoir plus"

@@ -14,6 +14,7 @@ en:
     check_categories: Only first delivery charges
     minimum_order_value: 'Minimum Purchase of '
     updated_at: Modified
+    created_at: Created
   free_delivery: Free delivery for this items.
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
   learn_more: "[+] Info"
