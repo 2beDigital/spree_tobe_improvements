@@ -22,6 +22,14 @@ module SpreeTobeImprovements
         copy_file "app/models/ckeditor/picture.rb", "app/models/ckeditor/picture.rb"
       end
 
+      def copy_product_duplicator_files
+        copy_file "lib/product_duplicator.rb", "lib/product_duplicator.rb"
+      end
+
+      def add_require
+        inject_into_file 'config/initializers/spree.rb', " require 'product_duplicator'\n", :before => "Spree.config do |config|\n"
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_tobe_improvements'
       end
