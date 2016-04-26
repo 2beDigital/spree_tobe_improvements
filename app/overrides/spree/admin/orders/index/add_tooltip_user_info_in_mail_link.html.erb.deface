@@ -1,4 +1,4 @@
 <!-- replace "erb[loud]:contains('link_to order.email, edit_admin_user_path(order.user)')" -->
 <%= link_to order.email, edit_admin_user_path(order.user),
                         :data =>{:powertip => "#{order.bill_address.firstname} #{order.bill_address.lastname}<br>
-                        #{order.bill_address.company} #{order.bill_address.phone}"}, :class => "tooltips" %>
+                        #{order.bill_address.company} #{order.bill_address.phone}"}, :class => "tooltips" if order.bill_address.present? %>
