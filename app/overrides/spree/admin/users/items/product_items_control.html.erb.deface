@@ -1,0 +1,7 @@
+<!-- replace 'erb:contains("item.product.name")' closing_selector "erb[silent]:contains('end')" -->
+<% if item.variant %>
+    <%= item.product.name %><br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+<% end %>
+<%if item.variant && item.variant.sku.present? %>
+  <strong><%= Spree.t(:sku) %>:</strong> <%= item.variant.sku %>
+<% end %>
