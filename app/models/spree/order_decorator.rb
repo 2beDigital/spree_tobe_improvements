@@ -10,7 +10,7 @@ Spree::Order.class_eval do
 
 	# override this to also set current user locale for email i18n
 	def deliver_order_confirmation_email
-		update_attribute(:locale, I18n.locale) if self.column_names.include?(:locale.to_s)
+		update_attribute(:locale, I18n.locale) if self.has_attribute?(:locale)
     orig_deliver_order_confirmation_email
 	end
 	
