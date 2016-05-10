@@ -1,4 +1,7 @@
 Spree::Order.class_eval do
+
+  alias_method :orig_deliver_order_confirmation_email,  :deliver_order_confirmation_email unless method_defined? :orig_deliver_order_confirmation_email
+
   def checkout_allowed?
     return :not_empty     unless line_items.count > 0
     return :minimum_order_value unless total >= Spree::Config[:minimum_order_value].to_f
@@ -6,15 +9,10 @@ Spree::Order.class_eval do
   end
 
 	# override this to also set current user locale for email i18n
-	#def deliver_order_confirmation_email
-	#	update_attribute(:locale, I18n.locale)
-	#	begin
-	#		OrderMailer.confirm_email(self.id).deliver
-	#	rescue Exception => e
-	#		logger.error("#{e.class.name}: #{e.message}")
-	#		logger.error(e.backtrace * "\n")
-	#	end
-	#end
+	def deliver_order_confirmation_email
+		update_attribute(:locale, I18n.locale) if self.column_names.include?(:locale.to_s)
+    orig_deliver_order_confirmation_email
+	end
 	
   private
 
