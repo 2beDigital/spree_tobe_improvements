@@ -19,3 +19,5 @@ en:
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
   learn_more: "[+] Info"
   cookies_services_info: "Cookies help us deliver our services. By using our services, you agree to our use of cookies."
+  order_delete: "The order has been deleted."
+  order_not_delete: "The order can not be eliminated."

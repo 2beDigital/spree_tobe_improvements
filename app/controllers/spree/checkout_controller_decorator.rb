@@ -10,6 +10,7 @@ Spree::CheckoutController.class_eval do
   private
 
     def check_backorder_and_shipment_categories
+      return unless params[:state] == "delivery"
       if Spree::Config[:backorder_charge] || Spree::Config[:check_categories]
         @order.shipments.each do |shipment|
           if shipment.backordered? && Spree::Config[:backorder_charge]
@@ -19,7 +20,7 @@ Spree::CheckoutController.class_eval do
               shipment.update_column(:cost, 0)
           end
         end
-        @order.update!
+        @order.reload.update!
       end
     end
 end
