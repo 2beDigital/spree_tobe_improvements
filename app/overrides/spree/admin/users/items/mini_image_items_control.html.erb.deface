@@ -1,0 +1,2 @@
+<!-- replace 'erb:contains("mini_image(item.variant)")' -->
+<%= mini_image(item.variant) if item.variant %>

@@ -1,5 +1,15 @@
 <%
-   Encoding.default_external = "UTF-8"
-   headers = [Spree.t(:login),Spree.t(:created_at)]
+  Encoding.default_external = "UTF-8"
+  if (Spree::User.method_defined?(:applyforretailer)) then
+    headers = [Spree.t(:login),Spree.t(:created_at),t(:retail),t(:applyforretailer)]
 %>
-<%= CSV.generate_line headers %><% @collection.each do |user| %><%= CSV.generate_line([user.login,l(user.created_at.to_date)]) %><% end %>
+    <%= CSV.generate_line headers %><% @collection.each do |user| %><%= CSV.generate_line([user.login,l(user.created_at.to_date),user.has_spree_role?("retail"),user.applyforretailer]) %><% end %>
+<%
+  else
+    headers = [Spree.t(:login),Spree.t(:created_at)]
+%>
+    <%= CSV.generate_line headers %><% @collection.each do |user| %><%= CSV.generate_line([user.login,l(user.created_at.to_date)]) %><% end %>
+<%
+  end
+%>
+

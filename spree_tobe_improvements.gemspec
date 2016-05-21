@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_tobe_improvements'
-  s.version     = '2.4.14'
+  s.version     = '2.4.22'
   s.summary     = '2BeDigital Improvements'
   s.description = '2BeDigital Improvements'
   s.required_ruby_version = '>= 1.9.3'
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_i18n', '>= 2.4.7'
   s.add_dependency 'spree_static_content', '>= 2.3.0'
   s.add_dependency 'spree_editor', '>= 2.2.1'
+  s.add_dependency 'httparty', '>= 0.13.7'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
@@ -31,4 +32,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
+
 end

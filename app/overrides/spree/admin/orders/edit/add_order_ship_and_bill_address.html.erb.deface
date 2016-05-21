@@ -1,0 +1,19 @@
+<!-- insert_bottom '[data-hook="admin_order_edit_form"]' -->
+<div data-hook="admin_order_show_addresses" class="row">
+  <% if @order.bill_address %>
+      <fieldset class="alpha six columns no-border-bottom">
+        <legend align="center"><%= Spree.t(:billing_address) %></legend>
+        <div class="align-center">
+          <%= render :partial => 'spree/admin/shared/address', :locals => { :address => @order.bill_address } %>
+        </div>
+      </fieldset>
+  <% end %>
+  <% if @order.ship_address %>
+      <fieldset class="omega six columns no-border-bottom">
+        <legend align="center"><%= Spree.t(:shipping_address) %></legend>
+        <div class="align-center">
+          <%= render :partial => 'spree/admin/shared/address', :locals => { :address => @order.ship_address } %>
+        </div>
+      </fieldset>
+  <% end %>
+</div>
