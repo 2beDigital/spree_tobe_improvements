@@ -3,5 +3,5 @@ Deface::Override.new(:virtual_path => "spree/admin/orders/index",
                      :insert_bottom => "[data-hook='admin_orders_index_row_actions']",
                      :text =>  "<% css_class = (order.complete?) ? 'fa fa-trash icon_link with-tip no-text' : 'delete-resource fa fa-trash icon_link with-tip no-text' %>
                      		   	<% if !order.complete? %>
-                               		<%= link_to '', admin_order_path(order.id), class: css_class, method: :delete, data: {confirm: 'Are you sure?'} %>
+                               		<%= link_to '', admin_order_path(order.id), class: css_class, method: :delete, data: {confirm: t(:confirm)} %>
                                	<% end %> ")
