@@ -22,5 +22,3 @@ es:
   order_delete: "La orden ha sido eliminada."
   order_not_delete: "La orden no puede ser eliminada."
   retail: "Retail"
-  confirm: "¿Estas seguro de eliminar esta orden?"
-
