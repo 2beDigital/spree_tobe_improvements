@@ -12,6 +12,9 @@ es:
     page_edit: Editar página
     backorder_charge: Envio sin cargo para pedidos pendientes de stock
     check_categories: Cargos solo en el primer envio
+    show_sku: Mostrar referencia del producto
+    orders_and_shipments_settings: Configuración de pedidos y envios
+    invoices_settings: Configuracion de factura
     minimum_order_value: 'Compra mínima de '
     updated_at: Modificado
     created_at: Creado
@@ -22,4 +25,4 @@ es:
   order_delete: "La orden ha sido eliminada."
   order_not_delete: "La orden no puede ser eliminada."
   retail: "Retail"
-  show_sku: Mostrar referencia del producto
+

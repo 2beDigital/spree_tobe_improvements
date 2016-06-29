@@ -13,6 +13,9 @@ en:
     backorder_charge: Free shipping on orders pending stock
     check_categories: Only first delivery charges
     minimum_order_value: 'Minimum Purchase of '
+    show_sku: Show product reference
+    orders_and_shipments_settings: Orders and shipments settings
+    invoices_settings: Invoices settings
     updated_at: Modified
     created_at: Created
   free_delivery: Free delivery for this items.
@@ -22,4 +25,4 @@ en:
   order_delete: "The order has been deleted."
   order_not_delete: "The order can not be eliminated."
   retail: "Retail"
-  show_sku: Show product reference
+  
