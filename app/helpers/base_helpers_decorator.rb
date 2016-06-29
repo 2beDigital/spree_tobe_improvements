@@ -10,3 +10,7 @@ def cookies_accepted?
   return false unless request.cookies['accept.cookies'].present?
   true
 end
+
+def show_sku
+  return Spree::Config[:show_sku]
+end

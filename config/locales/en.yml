@@ -10,7 +10,7 @@ en:
   spree:
     back_to_pages_list: Back To Pages List
     page_edit: Edit Page
-    backorder_charge: Without backorder charge
+    backorder_charge: Free shipping on orders pending stock
     check_categories: Only first delivery charges
     minimum_order_value: 'Minimum Purchase of '
     updated_at: Modified
@@ -22,3 +22,4 @@ en:
   order_delete: "The order has been deleted."
   order_not_delete: "The order can not be eliminated."
   retail: "Retail"
+  show_sku: Show product reference

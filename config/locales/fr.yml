@@ -10,7 +10,7 @@ fr:
   spree:
     back_to_pages_list: Retour à la liste des pages
     page_edit: Modifier la page
-    backorder_charge: Sans frais de rupture de stock
+    backorder_charge: Livraison gratuite sur les commandes sur actions en cours
     check_categories: Seuls les frais de livraison premier
     minimum_order_value: 'Achat minimum de '
     updated_at: Modifié
@@ -20,3 +20,4 @@ fr:
   learn_more: "En savoir plus"
   cookies_services_info: "Les cookies nous permettent d'offrir nos services. En utilisant nos services, vous acceptez notre utilisation des cookies."
   retail: "Retail"
+  show_sku: Afficher la référence du produit
