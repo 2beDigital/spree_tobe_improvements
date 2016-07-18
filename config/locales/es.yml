@@ -18,6 +18,8 @@ es:
     minimum_order_value: 'Compra mínima de '
     updated_at: Modificado
     created_at: Creado
+    select_a_return_authorization_reason: Selecciona un motivo de devolución
+    select_a_stock_location: Selecciona una localización de stock			
   free_delivery: Envío gratuito para los siguientes productos.
   info_free_shipping_for_backorder: 'No tenemos suficiente producto en el almacén, se le enviará cuando haya disponibilidad. Gracias y disculpen las molestias.'
   learn_more: "[+] Info"
