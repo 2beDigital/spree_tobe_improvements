@@ -1,0 +1,32 @@
+﻿# Sample localization file for Spanish. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ca:
+  export_to_csv: "Exportar a CSV"
+  back_to_general_settings: "Tornar a configuració"
+  gtm: "Administrador etiquetes google"
+  checkout_allowed_errors:
+    minimum_order_value: "Compra mínima de "
+  spree:
+    back_to_pages_list: Tornar a la llista de pàgines
+    page_edit: Editar pàgina
+    backorder_charge: Enviament sene càrrec per a comandes pendents de stock
+    check_categories: Càrrecs només en el primer enviament
+    show_sku: Mostrar referència del producte
+    orders_and_shipments_settings: Configuracin de comandes i enviaments
+    invoices_settings: Configuració de factura
+    minimum_order_value: "Compra mínima de "
+    updated_at: Modificat
+    created_at: Creat
+    select_a_return_authorization_reason: Seleccioni un motiu de devolució
+    select_a_stock_location: Seleccioni una localització de stock
+    shipment_states:
+      canceled: cancel·lat
+  free_delivery: Enviament gratuit pels següents productes.
+  info_free_shipping_for_backorder: "No tenim suficients productes al magatzem, se li enviarà quan hi hagi disponibilitat. Gràcies y disculpi les molèsties."
+  learn_more: "[+] Info"
+  cookies_services_info: "Les cookies ens ajuden a oferir els nostres serveis. Al utilitzar els nostres serveis, vostè accept l'ús de cookies."
+  order_delete: "La comanda ha sigut eliminada."
+  order_not_delete: "La comanda no pot ser eliminada."
+  retail: "Retail"
+

@@ -17,7 +17,9 @@ fr:
     updated_at: Modifié
     created_at: Créé
     select_a_return_authorization_reason: Select a reason for the return authorization
-    select_a_stock_location: Select a stock location		
+    select_a_stock_location: Select a stock location
+    shipment_states:
+      canceled: canceled
   free_delivery: Livraison gratuite pour ces produits.
   info_free_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
   learn_more: "En savoir plus"
