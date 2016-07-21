@@ -30,3 +30,8 @@ Deface::Override.new(:virtual_path => 'spree/order_mailer/confirm_email',
                      :name => 'hidden_taxes_in_order_mailer_confirm',
                      :replace => 'erb[silent]:contains(" if @order.all_adjustments.eligible.tax.exists?")',
                      :text => '<% if @order.all_adjustments.eligible.tax.exists? && show_taxes %>')
+
+Deface::Override.new(:virtual_path => 'spree/shared/_minicart_content',
+                     :name => 'hidden_taxes_in_minicart_content',
+                     :replace => 'erb[silent]:contains(" unless adjustments.sum(&:amount) == 0 ")',
+                     :text => '<% if adjustments.sum(&:amount) != 0 && show_taxes %>')
