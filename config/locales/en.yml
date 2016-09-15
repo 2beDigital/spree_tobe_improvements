@@ -19,6 +19,8 @@ en:
     updated_at: Modified
     created_at: Created
     show_taxes: 'Show taxes (Ej: IVA)'
+    accept_terms_and_conditions: I accept the Terms and Conditions
+    must_accept_terms_and_conditions: You must accept the Terms and Conditions
   free_delivery: Free delivery for this items.
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
   learn_more: "[+] Info"

@@ -4,4 +4,5 @@ Spree::AppConfiguration.class_eval do
   preference :check_categories,    :boolean, :default => false
   preference :show_sku,            :boolean, :default => true
   preference :show_taxes,          :boolean, :default => true
+  preference :require_terms_and_conditions, :boolean, default: false
 end
