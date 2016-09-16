@@ -14,18 +14,6 @@ Spree::Order.class_eval do
 		update_attribute(:locale, I18n.locale) if self.has_attribute?(:locale)
     orig_deliver_order_confirmation_email
 	end
-
-  def ensure_terms_and_conditions
-    unless terms_and_conditions_accepted?
-      errors.add(:terms_and_conditions, Spree.t(:must_accept_terms_and_conditions))
-    end
-
-    errors.empty?
-  end
-
-  def terms_and_conditions_accepted?
-    terms_and_conditions.in?([true, 'true', '1'])
-  end
 	
   private
 

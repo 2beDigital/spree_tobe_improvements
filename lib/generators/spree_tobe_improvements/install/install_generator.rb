@@ -28,7 +28,6 @@ module SpreeTobeImprovements
 
       def add_require
         inject_into_file 'config/initializers/spree.rb', " require 'product_duplicator'\n", :before => "Spree.config do |config|\n"
-        inject_into_file 'config/initializers/spree.rb', " Spree::PermittedAttributes.checkout_attributes << :terms_and_conditions", :before => /^end/ 
       end
 
       def add_migrations

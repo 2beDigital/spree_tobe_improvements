@@ -1,0 +1,12 @@
+<% if(Spree::Config[:require_terms_and_conditions]) %>
+  <div class="terms_and_conditions">
+	  <textarea readonly style="width: 100%"><%= Spree.t(:accept_terms_and_conditions) %></textarea>
+	  <%= check_box_tag :accept_term_and_condition, 'accepted', false, onchange: "Spree.toggleSaveOnClick()" %>
+	  <label><%= Spree.t(:agree_to_terms_of_service) %>
+	</div>
+<% end %>
+
+<%= submit_tag Spree.t(:save_and_continue),
+  :disabled => Spree::Config[:require_terms_and_conditions],
+  :class => "btn btn-lg btn-success" %>
+<script>Spree.disableSaveOnClick();</script>
