@@ -23,4 +23,11 @@ Spree::CheckoutController.class_eval do
         @order.reload.update!
       end
     end
+
+    def check_registration
+      return unless Spree::Auth::Config[:registration_step]
+      return if spree_current_user or current_order.email
+      store_location
+      redirect_to spree.signup_path
+    end
 end
