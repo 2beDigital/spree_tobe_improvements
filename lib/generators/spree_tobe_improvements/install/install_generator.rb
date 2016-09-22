@@ -27,7 +27,7 @@ module SpreeTobeImprovements
       end
 
       def add_require
-        inject_into_file 'config/initializers/spree.rb', " require 'product_duplicator'\n", :before => "Spree.config do |config|\n"
+        inject_into_file 'app/helpers/application_helper.rb', "require 'product_duplicator'\n", :before => "module ApplicationHelper\n"
       end
 
       def add_migrations
