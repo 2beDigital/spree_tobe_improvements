@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= Spree.t(:editing_user) %></h3>
+    </div>
+      <div id="new-customer" class="panel-body" data-hook="login">
+          <%= form_for @user, :as => :spree_user, :url => spree.user_path(@user), :method => :put do |f| %>
+            <div data-hook="signup_inside_form">
+              <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
+            </div>
+            <div data-hook="login_extras">
+                <%= f.fields_for :bill_address, (Spree::Address.default(@user, "bill")) do |ba_form| %>
+                  <% ba_form.object ||= Spree::Address.new(country: Spree::Country.new) %>
+                  <div id="reailer_billing_details">
+                        <%= render :partial => 'spree/shared/address_form', :locals => { :f => ba_form, :type => "billing" } %>
+                  </div>
+                <% end %>
+
+                <p><%= f.submit Spree.t(:update), :class => 'btn btn-lg btn-success btn-block' %></p>
+            </div>
+          <% end %>
+      </div>
+  </div>
+</div>
+
+
+<% if I18n.locale != :en %>
+    <script src="<%= assets_prefix %>/jquery.validate/localization/messages_<%= I18n.locale.to_s.downcase.gsub("-", "") %>.js"></script>
+<% end %>
