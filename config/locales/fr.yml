@@ -20,6 +20,7 @@ fr:
     select_a_stock_location: Select a stock location
     shipment_states:
       canceled: canceled
+    my_new_address: Ma nouvelle adresse
   free_delivery: Livraison gratuite pour ces produits.
   info_free_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
   learn_more: "En savoir plus"

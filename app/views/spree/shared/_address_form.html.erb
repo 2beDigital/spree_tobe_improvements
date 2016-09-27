@@ -1,5 +1,5 @@
 <% s_or_b = type.chars.first %>
-<h4><%= Spree.t(:billing_address) %></h4>
+<h4><%= (params[:controller] == 'spree/users') ? Spree.t(:my_new_address) : Spree.t(:billing_address) %></h4>
 <hr>
 <div id="<%= type %>" data-hook="address_fields">
   <div class="form-group <%= "#{type}-row" %>">

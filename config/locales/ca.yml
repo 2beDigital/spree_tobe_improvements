@@ -22,6 +22,7 @@ ca:
     select_a_stock_location: Seleccioni una localització de stock
     shipment_states:
       canceled: cancel·lat
+    my_new_address: La meva nova direcció
   free_delivery: Enviament gratuit pels següents productes.
   info_free_shipping_for_backorder: "No tenim suficients productes al magatzem, se li enviarà quan hi hagi disponibilitat. Gràcies y disculpi les molèsties."
   learn_more: "[+] Info"

@@ -20,6 +20,7 @@ pt:
     select_a_stock_location: Select a stock location
     shipment_states:
       canceled: canceled
+    my_new_address: Meu novo endereço
   free_delivery: Frete grátis para esses produtos.
   info_free_shipping_for_backorder: 'Não temos produto suficiente em estoque e será enviado quando houver disponibilidade. Obrigado e desculpe.'
   learn_more: "Mais informação"
