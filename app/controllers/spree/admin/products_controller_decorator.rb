@@ -33,6 +33,7 @@ Spree::Admin::ProductsController.class_eval do
 		if @product.has_variants?
 			@product.variants.each do |variant|
 				variant.price = @product.price.to_f
+				variant.cost_price = @product.cost_price.to_f
 				variant.save
 			end
 		end
