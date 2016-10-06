@@ -2,7 +2,7 @@ Spree::Admin::ProductsController.class_eval do
 	alias_method :orig_update, :update unless method_defined? :orig_update
 	def update
 		orig_update
-		if params[:extend_master_price].present?
+		if @product.extend_master_price
 		  	modify_variant_price_with_master_price
 		end
 	end
