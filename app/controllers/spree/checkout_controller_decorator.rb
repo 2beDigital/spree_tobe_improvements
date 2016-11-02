@@ -34,7 +34,12 @@ Spree::CheckoutController.class_eval do
      def before_address
         # if the user has a default address, a callback takes care of setting
         # that; but if he doesn't, we need to build an empty one here
-        @order.bill_address = !spree_current_user.blank? ? spree_current_user.bill_address : Spree::Address.build_default
-        @order.ship_address = ( !spree_current_user.blank? ? spree_current_user.ship_address : Spree::Address.build_default ) if @order.checkout_steps.include?('delivery')
+        if spree_current_user.bill_address.blank?
+          @order.bill_address ||= Spree::Address.build_default
+          @order.ship_address ||= Spree::Address.build_default if @order.checkout_steps.include?('delivery')
+        else
+          @order.bill_address = spree_current_user.bill_address
+          @order.ship_address = spree_current_user.ship_address.blank? ? spree_current_user.bill_address : spree_current_user.ship_address
+        end
     end
 end
