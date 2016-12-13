@@ -49,9 +49,10 @@ $(document).ready ->
           for product in data.products
             if product.master.images[0] != undefined && product.master.images[0].small_url != undefined
               product.image = product.master.images[0].small_url
-            else if product.has_variants
+            else
               for variant in product.variants
-                if variant.images[0] != undefined && variant.images[0].small_url != undefined && product.image == undefined
+                if variant.images[0] != undefined && variant.images[0].small_url != undefined
                   product.image = variant.images[0].small_url
+                  break
             el.append(productTemplate({ product: product }))
           $('#sorting_explanation').show()
