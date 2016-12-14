@@ -41,7 +41,7 @@ $(document).ready ->
         id: e.val,
         token: Spree.api_key
       success: (data) ->
-        el.empty();
+        el.empty()
         if data.products.length == 0
           $('#sorting_explanation').hide()
           $('#taxon_products').html("<h4>" + Spree.translations.no_results + "</h4>")
