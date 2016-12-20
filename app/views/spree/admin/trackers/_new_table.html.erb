@@ -1,32 +1,15 @@
 <% @trackers.each do |tracker|%>
-	<% if tracker.analytics_id.present? %>
 	    <tr id="<%= spree_dom_id tracker %>" data-hook="admin_trackers_index_rows" class="<%= cycle('odd', 'even')%>">
+	    <% if tracker.analytics_id.present? %>
 	      <td class="align-center"><%= Spree.t(:google_analytics_id) %></td>
 	      <td class="align-center"><%= tracker.analytics_id %></td>
-	      <td class="align-center"><%= tracker.environment.to_s.titleize %></td>
-	      <td class="align-center"><%= tracker.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-	      <td class="actions">
-	        <%= link_to_edit tracker, :no_text => true %>
-	        <%= link_to_delete tracker, :no_text => true %>
-	      </td>
-	    </tr>
-	<% end %>
-	<% if tracker.gtm_id.present? %>
-	    <tr id="<%= spree_dom_id tracker %>" data-hook="admin_trackers_index_rows" class="<%= cycle('odd', 'even')%>">
+	    <% elsif tracker.gtm_id.present? %>
 	      <td class="align-center"><%= t(:gtm) %></td>
 	      <td class="align-center"><%= tracker.gtm_id %></td>
-	      <td class="align-center"><%= tracker.environment.to_s.titleize %></td>
-	      <td class="align-center"><%= tracker.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-	      <td class="actions">
-	        <%= link_to_edit tracker, :no_text => true %>
-	        <%= link_to_delete tracker, :no_text => true %>
-	      </td>
-	    </tr>
-	<% end %>
-	<% if tracker.facebook_pixel_id.present? %>
-	    <tr id="<%= spree_dom_id tracker %>" data-hook="admin_trackers_index_rows" class="<%= cycle('odd', 'even')%>">
+	    <% elsif tracker.facebook_pixel_id.present? %>
 	      <td class="align-center"><%= t(:facebook_pixel) %></td>
 	      <td class="align-center"><%= tracker.facebook_pixel_id %></td>
+	    <% end %>
 	      <td class="align-center"><%= tracker.environment.to_s.titleize %></td>
 	      <td class="align-center"><%= tracker.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
 	      <td class="actions">
@@ -34,5 +17,4 @@
 	        <%= link_to_delete tracker, :no_text => true %>
 	      </td>
 	    </tr>
-	<% end %>
 <% end %>
