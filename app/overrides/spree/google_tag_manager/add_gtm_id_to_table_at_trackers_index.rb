@@ -8,10 +8,17 @@ Deface::Override.new(:virtual_path => 'spree/admin/trackers/index',
                      :name => 'replace_table',
                      :sequence => 2,
                      :replace => 'erb[loud]:contains("Spree.t(:google_analytics_id)")',
-                     :text => '<%= Spree.t(:analytics_trackers) %>')
+                     :text => '<%= t(:tracker_identifier) %>')
+
+Deface::Override.new(:virtual_path => 'spree/admin/trackers/index',
+                     :name => 'add_column_to_table',
+                     :sequence => 3,
+                     :insert_top => 'tr[data-hook="admin_trackers_index_headers"]',
+                     :text => '<th><%= Spree.t(:analytics_trackers) %></th>')
+
 
 Deface::Override.new(:virtual_path => 'spree/admin/trackers/index',
                      :name => 'add_gtm_id_to_table',
-                     :sequence => 3,
+                     :sequence => 4,
                      :insert_top => 'tbody',
                      :partial => 'spree/admin/trackers/new_table' )

@@ -5,6 +5,8 @@ es:
   export_to_csv: "Exportar a CSV"
   back_to_general_settings: "Volver a configuración"
   gtm: 'Administrador etiquetas google'
+  facebook_pixel: 'Facebook pixel'
+  tracker_identifier: Tracker id
   checkout_allowed_errors:
     minimum_order_value: 'Compra mínima de '
   spree:
