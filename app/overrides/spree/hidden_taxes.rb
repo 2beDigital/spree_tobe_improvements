@@ -10,15 +10,21 @@ Deface::Override.new(:virtual_path => 'spree/orders/_adjustments',
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_summary',
                      :name => 'hidden_taxes_in_summary',
-                     :replace => 'erb[silent]:contains("order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each")',
-                     :closing_selector => "erb[silent]:contains('end')",
+                     :remove => 'erb[silent]:contains("order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each do |label, adjustments|")',
+                     :closing_selector => "erb[silent]:contains('end')")
+
+Deface::Override.new(:virtual_path => 'spree/checkout/_summary',
+                     :name => 'insert_taxes_before_total_in_summary',
+                     :insert_before => 'tr[data-hook="order_total"]',
                      :text => '<% if show_taxes %>
+                                  <tbody data-hook="order_details_tax_adjustments">
                                    <% order.all_adjustments.nonzero.tax.eligible.group_by(&:label).each do |label, adjustments| %>
                                           <tr class="total">
-                                                 <td><%= label %></td>
+                                                 <td><%= label.gsub(".0","") %></td>
                                                  <td><%= Spree::Money.new(adjustments.sum(&:amount), currency: order.currency).to_html %></td>
                                           </tr>
                                    <% end %>
+                                  </tbody>
                                <% end %>')
 
 Deface::Override.new(:virtual_path => 'spree/shared/_order_details',
