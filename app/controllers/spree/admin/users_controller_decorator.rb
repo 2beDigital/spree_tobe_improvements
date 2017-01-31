@@ -12,7 +12,9 @@ module Spree::Admin
     end
 		
 		def sort
-			if (!params.has_key?(:q))
+			logger.debug "SOOORT"
+			logger.debug request.format
+			if (!params.has_key?(:q) and !request.format.csv?)
 				redirect_to(admin_users_url('q[s]'=>'created_at desc')) and return
 			end		
 		end
