@@ -31,7 +31,7 @@ es:
     my_new_address: Mi nueva dirección
     extend_master_price: Aplicar precio a las variantes
   free_delivery: Envío gratuito para los siguientes productos.
-  info_free_shipping_for_backorder: 'No tenemos suficiente producto en el almacén, se le enviará cuando haya disponibilidad. Gracias y disculpen las molestias.'
+  info_shipping_for_backorder: 'No tenemos suficiente producto en el almacén, se le enviará cuando haya disponibilidad. Gracias y disculpen las molestias.'
   learn_more: "[+] Info"
   cookies_services_info: "Las cookies nos ayudan a ofrecer nuestros servicios. Al utilizar nuestros servicios, usted acepta el uso de cookies."
   order_delete: "La orden ha sido eliminada."

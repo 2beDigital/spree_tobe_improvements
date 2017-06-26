@@ -24,7 +24,7 @@ ca:
       canceled: cancel·lat
     my_new_address: La meva nova direcció
   free_delivery: Enviament gratuit pels següents productes.
-  info_free_shipping_for_backorder: "No tenim suficients productes al magatzem, se li enviarà quan hi hagi disponibilitat. Gràcies y disculpi les molèsties."
+  info_shipping_for_backorder: "No tenim suficients productes al magatzem, se li enviarà quan hi hagi disponibilitat. Gràcies y disculpi les molèsties."
   learn_more: "[+] Info"
   cookies_services_info: "Les cookies ens ajuden a oferir els nostres serveis. Al utilitzar els nostres serveis, vostè accept l'ús de cookies."
   order_delete: "La comanda ha sigut eliminada."

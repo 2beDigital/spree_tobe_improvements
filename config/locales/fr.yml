@@ -22,7 +22,7 @@ fr:
       canceled: canceled
     my_new_address: Ma nouvelle adresse
   free_delivery: Livraison gratuite pour ces produits.
-  info_free_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
+  info_shipping_for_backorder: 'Nous ne disposons pas suffisamment de produits en stock et sera envoyé quand il ya la disponibilité. Merci et désolé.'
   learn_more: "En savoir plus"
   cookies_services_info: "Les cookies nous permettent d'offrir nos services. En utilisant nos services, vous acceptez notre utilisation des cookies."
   retail: "Retail"
