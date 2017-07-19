@@ -6,6 +6,10 @@ def get_facebook_pixel_id
   Spree::Tracker.where('facebook_pixel_id <> ? AND active = ?', '', true).last
 end
 
+def get_google_analitics_tracker
+  Spree::Tracker.where('analytics_id <> ? AND active = ?', '', true).last
+end
+
 def backorder_charge
   return Spree::Config[:backorder_charge]
 end
