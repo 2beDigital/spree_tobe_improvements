@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_tobe_improvements'
-  s.version     = '2.4.44'
+  s.version     = '2.4.45'
   s.summary     = '2BeDigital Improvements'
   s.description = '2BeDigital Improvements'
   s.required_ruby_version = '>= 1.9.3'
